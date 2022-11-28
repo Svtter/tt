@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "ttc"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["svtter <xiuhao@thinghoo.com>"]
+include = ["src/*"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -23,12 +24,12 @@ name = "thinghoo"
 url = "https://nexus.beijing-epoch.com/repository/pypi-thinghoo-group/simple"
 default = true
 
+[tool.poetry.scripts]
+ttc = "ttc.__main__:cli"
+
 # -- FILE: pytest.ini (or tox.ini)
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "conf.settings"
 # -- recommended but optional:
 python_files = "tests.py test_*.py *_tests.py"
 addopts = "-n3"
-
-[tool.poetry.scripts]
-ttc = "ttc.__main__:cli"

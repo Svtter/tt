@@ -1,5 +1,7 @@
 import click
 
+from ttc import __version__
+
 
 @click.group()
 def cli():
@@ -26,4 +28,11 @@ def create(name):
     os.system(f"cookiecutter {template}")
 
 
+@click.command()
+def version():
+    """show version information"""
+    click.echo(f"ttc version is: {__version__}")
+
+
 cli.add_command(create)
+cli.add_command(version)

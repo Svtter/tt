@@ -1,9 +1,21 @@
 import click
 
 
+@click.group()
+def cli():
+    pass
+
+
 @click.command()
-@click.option("--name", prompt="template name", help="The template need to create")
-def cli(name):
+@click.option(
+    "--name",
+    prompt="template name",
+    help="The template need to create; django, package, etc.",
+)
+def create(name):
+    """
+    create template via name
+    """
     import os
 
     template_dict = {
@@ -12,3 +24,6 @@ def cli(name):
     }
     template = template_dict[name]
     os.system(f"cookiecutter {template}")
+
+
+cli.add_command(create)

@@ -6,7 +6,7 @@ authors = ["svtter <xiuhao@thinghoo.com>"]
 include = ["src/*"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.7"
 click = "^8.1.3"
 cookiecutter = "^2.1.1"
 

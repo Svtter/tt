@@ -33,5 +33,25 @@ def version():
     click.echo(f"ttc version is: {__version__}")
 
 
-cli.add_command(create)
-cli.add_command(version)
+@click.command(help="write version to __init__.py and pyproject.toml")
+@click.option("--version", help="The new verison!", required=True)
+def write(version):
+    filepath = "src/ttc/__init__.py"
+    with open(filepath, "w") as f:
+        f.write(f'__version__ = "{version}"')
+
+    from pathlib import Path
+
+    import toml
+
+    p = Path("./pyproject.toml")
+    res = toml.load(p)
+    res["tool"]["poetry"]["version"] = version
+    # write back
+    with open(p, "w") as f:
+        toml.dump(res, f)
+
+
+clist = [create, version, write]
+for c in clist:
+    cli.add_command(c)

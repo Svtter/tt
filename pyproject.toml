@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ttc"
-version = "0.2.2"
+version = "0.2.3"
 description = ""
 authors = ["svtter <xiuhao@thinghoo.com>"]
 include = ["src/*"]

@@ -12,7 +12,13 @@ def cli():
 @click.option(
     "--name",
     prompt="template name",
-    help="The template need to create; django, package, etc.",
+    help="The template need to create",
+    type=click.Choice(
+        [
+            "django",
+            "package",
+        ]
+    ),
 )
 def create(name):
     """

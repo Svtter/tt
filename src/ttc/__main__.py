@@ -17,6 +17,7 @@ def cli():
         [
             "django",
             "package",
+            "compose",
         ]
     ),
 )

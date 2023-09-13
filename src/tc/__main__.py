@@ -1,6 +1,6 @@
 import click
 
-from ttc import __version__, ttc
+from tc import __version__, tc
 
 
 @click.group()
@@ -25,7 +25,7 @@ def create(name):
     """
     create template via name
     """
-    ttc.create(name)
+    tc.create(name)
 
 
 @click.command()

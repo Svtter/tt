@@ -1,4 +1,4 @@
-from ttc import __version__
+from tc import __version__
 
 
 def test_version():

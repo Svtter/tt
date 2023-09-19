@@ -1,18 +1,22 @@
+[tool.poetry]
+# poetry version == 1.6
+name = "template_creator"
+version = "0.1.0"
+description = ""
+authors = [ "svtter <svtter@163.com>",]
+packages = [
+    { include = "src/*" }
+]
+
+
 [build-system]
 requires = [ "poetry-core>=1.0.0",]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
-name = "template creator"
-version = "0.1.0"
-description = ""
-authors = [ "svtter <svtter@163.com>",]
-include = [ "src/*",]
-
 [[tool.poetry.source]]
 name = "tsinghua"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-default = true
+priority = 'default'
 
 [tool.poetry.dependencies]
 python = "^3.7"

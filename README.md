@@ -14,3 +14,13 @@ pip install tc
 ## Usage
 
 `ttc create --name django`
+
+template_dict:
+
+```python
+template_dict = {
+    "django": "{prefix}/cookiecutter-django.git".format(prefix=prefix),
+    "package": "{prefix}/cookiecutter-pypackage.git".format(prefix=prefix),
+    "compose": "{prefix}/cookiecutter-compose.git".format(prefix=prefix),
+}
+```

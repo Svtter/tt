@@ -1,9 +1,10 @@
 [tool.poetry]
 # poetry version == 1.6
-name = "template_creator"
-version = "0.1.0"
+name = "svtter_template_creator"
+version = "0.3.0"
 description = ""
 authors = [ "svtter <svtter@163.com>",]
+keywords = ["template", "django"]
 packages = [
     { include = "src/*" }
 ]
@@ -16,7 +17,11 @@ build-backend = "poetry.core.masonry.api"
 [[tool.poetry.source]]
 name = "tsinghua"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-priority = 'default'
+priority = "default"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "supplemental"
 
 [tool.poetry.dependencies]
 python = "^3.7"

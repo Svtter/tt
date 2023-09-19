@@ -11,7 +11,7 @@ include = [ "src/*",]
 
 [[tool.poetry.source]]
 name = "tsinghua"
-url = "https://nexus.beijing-epoch.com/repository/pypi-thinghoo-group/simple"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
 
 [tool.poetry.dependencies]

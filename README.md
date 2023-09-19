@@ -8,7 +8,10 @@ This commandline application is built for create new project with specify code t
 
 ```bash
 # from pypi
-pip install tc
+pip install svtter_template_creator
+
+# or
+pipx install svtter_template_creator
 ```
 
 ## Usage

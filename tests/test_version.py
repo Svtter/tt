@@ -1,4 +1,4 @@
-from tc import __version__
+from svtter_template_creator import __version__
 
 
 def test_version():

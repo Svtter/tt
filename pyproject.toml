@@ -6,9 +6,7 @@ readme = "README.md"
 description = ""
 authors = [ "svtter <svtter@163.com>",]
 keywords = ["template", "django"]
-packages = [
-    { include = "src/*" }
-]
+include = ["src/*",]
 
 
 [build-system]
@@ -36,7 +34,7 @@ pytest-xdist = "^3.0.2"
 pre-commit = "^2.20.0"
 
 [tool.poetry.scripts]
-stc = "tc.__main__:cli"
+tt = "svtter_template_creator.__main__:cli"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "conf.settings"

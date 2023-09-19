@@ -1,7 +1,7 @@
 [tool.poetry]
 # poetry version == 1.6
 name = "svtter_template_creator"
-version = "0.3.1"
+version = "0.3.2"
 readme = "README.md"
 description = ""
 authors = [ "svtter <svtter@163.com>",]
@@ -36,7 +36,7 @@ pytest-xdist = "^3.0.2"
 pre-commit = "^2.20.0"
 
 [tool.poetry.scripts]
-ttc = "ttc.__main__:cli"
+tc = "tc.__main__:cli"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "conf.settings"

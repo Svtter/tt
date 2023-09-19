@@ -15,9 +15,12 @@ pip install tc
 
 `ttc create --name django`
 
+set environment variable: `export TC_URL="<your prefix>"`
+
 template_dict:
 
 ```python
+prefix = os.getenv("TC_URL", "git@github.com:svtter")
 template_dict = {
     "django": "{prefix}/cookiecutter-django.git".format(prefix=prefix),
     "package": "{prefix}/cookiecutter-pypackage.git".format(prefix=prefix),

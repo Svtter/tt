@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path("", include("base.urls"), name="base"),
     path("admin/", admin.site.urls),
     path("repos/", include("repos.urls"), name="repos"),
 ]

@@ -12,6 +12,10 @@ include = ["src/*",]
 [tool.poetry.group.dev.dependencies]
 djlint = "^1.34.0"
 
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+
 [build-system]
 requires = [ "poetry-core>=1.0.0",]
 build-backend = "poetry.core.masonry.api"

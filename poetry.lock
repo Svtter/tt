@@ -614,6 +614,25 @@ url = "http://mirrors.aliyun.com/pypi/simple"
 reference = "aliyun"
 
 [[package]]
+name = "prompt-toolkit"
+version = "3.0.43"
+description = "Library for building powerful interactive command lines in Python"
+optional = false
+python-versions = ">=3.7.0"
+files = [
+    {file = "prompt_toolkit-3.0.43-py3-none-any.whl", hash = "sha256:a11a29cb3bf0a28a387fe5122cdb649816a957cd9261dcedf8c9f1fef33eacf6"},
+    {file = "prompt_toolkit-3.0.43.tar.gz", hash = "sha256:3527b7af26106cbc65a040bcc84839a3566ec1b051bb0bfe953631e704b0ff7d"},
+]
+
+[package.dependencies]
+wcwidth = "*"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
+[[package]]
 name = "pygments"
 version = "2.17.2"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -987,7 +1006,23 @@ type = "legacy"
 url = "http://mirrors.aliyun.com/pypi/simple"
 reference = "aliyun"
 
+[[package]]
+name = "wcwidth"
+version = "0.2.13"
+description = "Measures the displayed width of unicode strings in a terminal"
+optional = false
+python-versions = "*"
+files = [
+    {file = "wcwidth-0.2.13-py2.py3-none-any.whl", hash = "sha256:3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859"},
+    {file = "wcwidth-0.2.13.tar.gz", hash = "sha256:72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5"},
+]
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "ed1ebcdffcc978f72350d07348e85091872dc3f2ad1593d1c4dcd76f338f48c3"
+content-hash = "dffc0d1cf92bc5b9a50f219a7c1b92243d87386a79565e15aeec3ca0818900c3"

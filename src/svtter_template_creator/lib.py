@@ -1,3 +1,4 @@
+from sys import stderr
 import typing as t
 from warnings import warn
 import tomli
@@ -25,7 +26,9 @@ def create(name):
     # repo: dict[name, url]
     template_dict = read_repo()
 
-    template = template_dict[name]
+    template = template_dict.get(name, None)
+    if template is None:
+        raise ValueError(f"template {name} not found")
     os.system(f"cookiecutter {template}")
 
 

@@ -2,7 +2,11 @@ import toml
 import click
 from pathlib import Path
 
-from svtter_template_creator import __version__, lib
+from svtter_template_creator import __version__, lib, repl as r, utils as u
+
+
+# create a config file.
+u.create_config()
 
 
 @click.group()
@@ -30,6 +34,12 @@ def version():
     click.echo(f"ttc version is: {__version__}")
 
 
+@click.command(help="start a repl environment")
+def repl():
+    click.echo(f"ttc version is: {__version__}")
+    r.repl()
+
+
 @click.command(help="write version to __init__.py and pyproject.toml")
 @click.option("--version", help="The new verison!", required=True)
 def write(version):
@@ -45,6 +55,6 @@ def write(version):
         toml.dump(res, f)
 
 
-clist = [create, version, write]
+clist = [create, version, write, repl]
 for c in clist:
     cli.add_command(c)

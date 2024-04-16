@@ -1,6 +1,8 @@
+import toml
 import click
+from pathlib import Path
 
-from svtter_template_creator import __version__, tc
+from svtter_template_creator import __version__, lib
 
 
 @click.group()
@@ -25,7 +27,7 @@ def create(name):
     """
     create template via name
     """
-    tc.create(name)
+    lib.create(name)
 
 
 @click.command()
@@ -40,10 +42,6 @@ def write(version):
     filepath = "src/ttc/__init__.py"
     with open(filepath, "w") as f:
         f.write(f'__version__ = "{version}"')
-
-    from pathlib import Path
-
-    import toml
 
     p = Path("./pyproject.toml")
     res = toml.load(p)

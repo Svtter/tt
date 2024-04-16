@@ -15,13 +15,7 @@ def cli():
     "--name",
     prompt="template name",
     help="The template need to create",
-    type=click.Choice(
-        [
-            "django",
-            "package",
-            "compose",
-        ]
-    ),
+    type=click.Choice(lib.get_choice()),
 )
 def create(name):
     """

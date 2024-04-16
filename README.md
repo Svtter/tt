@@ -26,3 +26,8 @@ compose='git@github.com:svtter/cookiecutter-compose.git'
 django='git@github.com:svtter/cookiecutter-django.git'
 package='git@github.com:svtter/cookiecutter-pypackage.git'
 ```
+
+## TODO
+
+1. [ ] add `bumpversion`
+2. [ ] more options.

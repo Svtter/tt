@@ -1,4 +1,3 @@
-from sys import stderr
 import typing as t
 from warnings import warn
 import tomli
@@ -19,7 +18,7 @@ def get_dict():
     return template_dict
 
 
-def create(name):
+def create(name) -> None:
     """
     create template via name
     """
@@ -35,10 +34,10 @@ def create(name):
 def get_choice() -> t.List[str]:
     """get the choice from toml file"""
     repos = read_repo()
-    return repos.keys()
+    return list(repos.keys())
 
 
-def read_repo():
+def read_repo() -> t.Dict[str, str]:
     """get the repos from toml file"""
     c_path = pathlib.Path.home() / ".config" / "tt.toml"
     with open(c_path, "rb") as fp:

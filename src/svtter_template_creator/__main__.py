@@ -55,6 +55,24 @@ def write(version):
         toml.dump(res, f)
 
 
-clist = [create, version, write, repl]
-for c in clist:
+@click.command(help="show the config file")
+def config():
+    click.echo("-----------------------------")
+    click.echo("file path:")
+    click.echo(u.get_config().path)
+    click.echo("-----------------------------")
+    click.echo("config content:")
+    click.echo("-----------------------------")
+    click.echo(u.get_config().content)
+
+
+enabled_cmd = [
+    create,
+    version,
+    write,
+    repl,
+    config,
+]
+
+for c in enabled_cmd:
     cli.add_command(c)

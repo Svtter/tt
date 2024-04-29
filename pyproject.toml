@@ -11,6 +11,7 @@ include = ["src/*",]
 
 [tool.poetry.group.dev.dependencies]
 bumpversion = "^0.6.0"
+twine = "^5.0.0"
 
 [build-system]
 requires = [ "poetry-core>=1.0.0",]

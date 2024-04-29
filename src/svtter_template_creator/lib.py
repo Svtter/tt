@@ -1,5 +1,6 @@
 import typing as t
 from warnings import warn
+from cookiecutter.main import cookiecutter
 import tomli
 import pathlib
 import os
@@ -28,7 +29,7 @@ def create(name) -> None:
     template = template_dict.get(name, None)
     if template is None:
         raise ValueError(f"template {name} not found")
-    os.system(f"cookiecutter {template}")
+    cookiecutter(template)
 
 
 def get_choice() -> t.List[str]:
